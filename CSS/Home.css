@@ -396,6 +396,7 @@ span{
    @media (max-width: 600px){
     .heading{
         font-size: 350%;
+        text-decoration: underline 6px var(--main-color);
     }
    }
    @media (max-width:991px){
@@ -477,7 +478,19 @@ span{
         line-height: 1.7;
         margin: auto;
     }
-    @media (max-width: px){}
+    /* Media Queries */
+   @media (max-width: 1285px){
+    .services h2{
+        font-size: 600%;
+    }
+   }
+   @media (max-width: 600px){
+    .services h2{
+        font-size: 350%;
+        text-decoration: underline 6px var(--main-color);
+    }
+   }
+   
 /* SERVICES END */
 
 /* FOOTER START */
