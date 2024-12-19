@@ -14,12 +14,6 @@ body{
     background-color: var(--bg-color);
 }
 
-header{
-    /* position: sticky; */
-    /* top: 0; */
-}
-
-
 /* NAVBAR START */
 nav {
     background-color: var(--second-bg-color);
@@ -501,8 +495,9 @@ span{
     }
    }
    @media (max-width: 905px){
-    .service-box .service-info{
-        padding: 1.2rem 1.2rem;
+        .service-box .service-info{
+            padding: 1.2rem 1.2rem;
+        }
     }
     @media (max-width: 768px){
         .box-main{
@@ -538,6 +533,29 @@ span{
         }
     }
 /* SERVICES END */
+
+/* TESTIMONIALS START */
+    .testimonials{
+        background-color: var(--second-bg-color);
+    }
+    .testimonials-box{
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .testimonials .heading{
+        margin-bottom: 5rem;
+    }
+    .testimonials-box .testi-img{
+        width: 15rem;
+        border-radius: 50%;
+        border: 3px solid var(--main-color);
+        box-shadow: 0 0 25px var(--main-color);
+    }
+    /* 32:00 min */
+/* TESTIMONIALS END */
 
 /* FOOTER START */
 footer {
@@ -626,12 +644,11 @@ footer .copyright {
 }
    /* Media Queries */
    @media (max-width: 667px){
-   footer ul li{
-    display: block;
-    /* color: #131313; */
-    text-align: left;
-   }
-   }
+        footer ul li{
+            display: block;
+            text-align: left;
+        } 
+    }
 /* FOOTER END */
 
 /* Media Queries */
@@ -717,10 +734,3 @@ footer .copyright {
         font-size: 2rem;
     }
 }
-
-@media (max-width: 360px){
-    .home-content h1{
-        
-    }
-}
-
