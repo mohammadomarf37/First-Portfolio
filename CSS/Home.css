@@ -254,6 +254,7 @@ span{
     box-shadow: 0px 0px 50px var(--main-color);
     transition: all 0.4s ease-in-out;
     color: white;
+    border: 2px solid var(--main-color);
 }
 .btn:active{
     transform: scale(0.9);
@@ -620,9 +621,96 @@ span{
         .testimonial-item p{
             font-size: .95rem;
         }
+        .wrapper{
+            display: block;
+        }
+    }
+    @media (max-width: 1000px){
+        .testimonial-main{
+            display: block;
+        }
     }
     /* 32:00 min */
 /* TESTIMONIALS END */
+
+/* CONTACT US START */
+.input-form{
+    display: flex;
+    /* background-color: purple; */
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vh;
+    
+} 
+.inputs{
+    height: 55px;
+    width: 300px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 30vh;
+    padding-left: 1rem;
+    color: white;
+}
+.inputs:focus{
+    outline: none;
+    /* border: 1px solid var(--main-color); */
+}
+textarea{
+    background-color: var(--bg-color);
+    border:  2px solid var(--main-color);
+    border-radius: 2vh;
+    resize: none;
+    padding-left: .5rem;
+    padding-top: .2rem;
+    color: white;
+}
+textarea:focus{
+    outline: none;
+}
+.inbtn{
+    height: 35px;
+    width: 130px;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 25px var(--main-color);
+    font-size: .8rem;
+    color: black;
+    border: 2px solid transparent;
+    letter-spacing: 0.08rem;
+    font-weight: 700;
+    cursor: pointer; 
+}
+.inbtn:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 50px var(--main-color);
+    transition: all 0.4s ease-in-out;
+    color: white;
+    border: 1px solid var(--main-color);
+    background-color: var(--bg-color);
+}
+.inbtn:active{
+    transform: scale(0.9);
+    transition: transform 0.2s;
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+.inbtn:focus{
+    outline: none;
+}
+
+/* Media Queries */
+    @media (max-width: 670px){
+    .input-form{
+        display: block;
+    }
+    textarea{
+        margin-top: 1.5rem;
+    }
+    }
+/* CONTACT US END */
 
 /* FOOTER START */
 footer {
