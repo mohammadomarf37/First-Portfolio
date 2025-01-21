@@ -730,6 +730,7 @@ textarea:focus{
         }
         textarea{
             margin-top: 1.5rem;
+            columns: 30;
         }
     }
 /* CONTACT US END */
