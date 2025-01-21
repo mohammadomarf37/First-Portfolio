@@ -912,3 +912,20 @@ footer .copyright {
         font-size: 2rem;
     }
 }
+
+@media (max-width: 375px){
+   .home-content p{
+        font-size: 1rem;
+        /* background-color: bisque; */
+        width: 95%;
+        margin: auto;
+    }
+    .home-content h1{
+        /* background-color: bisque; */
+        margin: auto;
+    }
+    .text-animation,.text-animation span{
+        margin-left: .5rem;
+        /* background-color: aliceblue; */
+    }
+}
