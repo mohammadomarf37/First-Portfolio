@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Form</title>
+</head>
+<body>
+    <form id="portfolioForm" method="post" action="your-server-endpoint">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        let attempt = document.getElementById('password');
+
+        
+
+        function validatePassword() {
+            if (attempt === 0) {
+                alert("Invalid Password. Please try again.");
+                attempt++;
+            } else if (attempt === 1) {
+                // Message ko clear kar diya jaye (agar koi ho)
+                // Form ko submit kar diya jaye
+            }
+        }
+    </script>
+</body>
+</html>

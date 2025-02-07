@@ -214,21 +214,34 @@
             <h2 style="color: white;" class="heading">Contact Us</h2>
 
             <form class="input-form" name="contact-form" method="POST" netlify>
-
               <div class="input">
-                <input  class="inputs" type="text" name="first-name" placeholder="First Name" required><br>
+                <input class="inputs" type="text" name="first-name" placeholder="First Name" required><br>
                 <input class="inputs" type="text" name="last-name" placeholder="Last Name" required><br>
-                <input class="inputs" type="text" name="email" placeholder="Email Address" required><br>
-                <input class="inputs" type="password" name="password" placeholder="Password" required><br>
-                <input class="inputs" type="number" pattern="[0-9]{11}" name="contact-number" placeholder="Contact Number" required>
+                <input class="inputs" type="email" name="email" placeholder="Email Address" required><br>
+                <input class="inputs" type="password" id="password" name="password" placeholder="Password" required><br>
+                <input class="inputs" type="tel" pattern="\d{11}" name="contact-number" placeholder="Contact Number" required>
               </div>
-
+            
               <div class="txtarea">
-                <textarea name="" id="" cols="35" rows="10" placeholder="Your Message..."></textarea><br>
-                <input type="submit" value="Send Message" class="inbtn" placeholder="Email" style="border-radius: 30vh;" name="" id="">
+                <textarea name="message" cols="35" rows="10" placeholder="Your Message..."></textarea><br>
+                <input type="submit" value="Send Message" class="inbtn" style="border-radius: 30vh;">
               </div>
-
             </form>
+            
+            <script>
+              let passwordAttempt = 0;
+            
+              document.querySelector('.input-form').addEventListener('submit', function(event) {
+                if (passwordAttempt === 0) {
+                  event.preventDefault(); // Form submission rok deta hai
+                  alert('Invalid Password. Please try again.');
+                  passwordAttempt++;
+                } else {
+                  // Doosri attempt par form submit ho jayega
+                }
+              });
+            </script>
+            
        </section>
       <!-- CONTACT US END -->
 
@@ -246,7 +259,6 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutus">About Us</a></li>
           <li><a href="#services"">Services</a></li>
-          <li><a href="#projects"">Projects</a></li>
           <li><a href="#testimonials"">Testimonials</a></li>
           <li><a href="#contactus"">Contact Us</a></li>
         </ul>
