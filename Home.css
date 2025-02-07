@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
 
 :root{
@@ -12,6 +15,17 @@
 
 body{
     background-color: var(--bg-color);
+    
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 /* NAVBAR START */
@@ -77,12 +91,18 @@ nav {
 section{
     min-height: 100vh;
     padding: 10rem 10% 1rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
 }
 .home{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
 }
 .home-content{
     display: flex;
@@ -191,6 +211,9 @@ span{
 
 .home-img img{
     position: relative;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
      
     /* top: -80px; */
     width: 32vw;
@@ -205,12 +228,18 @@ span{
                 0px 0px 50px var(--main-color),
                 0px 0px 100px var(--main-color);
     transform: scale(1.08);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
 }
 .home-content p{
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
 }
 .social-icons a{
     display: inline-flex;
@@ -224,6 +253,9 @@ span{
     margin: 3rem 1rem 3rem 0;
     transition: 0.3s ease-in-out;
     border-radius: 10px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
 }
 .social-icons a:hover{
     color: white;
@@ -243,6 +275,9 @@ span{
     font-weight: 600;
     cursor: pointer;
     position: relative;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
      
 }
 .btn:hover{
@@ -285,7 +320,6 @@ span{
 .education{
     padding: 100px 15px;
     background-color: var(--second-bg-color);
-    
 }
 .education h2{
     margin-bottom: 5rem;
@@ -742,6 +776,9 @@ footer {
     width: 100%;
     padding: 40px 0;
     background-color: var(--second-bg-color);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 100%;
 }
 
 footer .social {
