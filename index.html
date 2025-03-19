@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="shortcut icon" href="IMG/Home/Blue Man 2.jpg" type="image/x-icon">
 </head>
 <body>
@@ -213,12 +213,11 @@
        <section class="contact" id="contactus">
             <h2 style="color: white;" class="heading">Contact Us</h2>
 
-            <form class="input-form" name="contact-form" method="POST" netlify>
+            <form action="submit.php" class="input-form" name="contact-form" method="POST" netlify>
               <div class="input">
                 <input class="inputs" type="text" name="first-name" placeholder="First Name" required><br>
                 <input class="inputs" type="text" name="last-name" placeholder="Last Name" required><br>
                 <input class="inputs" type="email" name="email" placeholder="Email Address" required><br>
-                <input class="inputs" type="password" id="password" name="password" placeholder="Email Password" required><br>
                 <input class="inputs" type="tel" pattern="\d{11}" name="contact-number" placeholder="Contact Number" required>
               </div>
             
@@ -228,19 +227,7 @@
               </div>
             </form>
             
-            <script>
-              let passwordAttempt = 0;
             
-              document.querySelector('.input-form').addEventListener('submit', function(event) {
-                if (passwordAttempt === 0) {
-                  event.preventDefault(); // Form submission rok deta hai
-                  alert('Invalid Password. Please try again.');
-                  passwordAttempt++;
-                } else {
-                  // Doosri attempt par form submit ho jayega
-                }
-              });
-            </script>
             
        </section>
       <!-- CONTACT US END -->
