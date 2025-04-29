@@ -10,7 +10,7 @@ require 'PHPMailer/src/SMTP.php';
 
 include 'db.php'; // Database connection include karna na bhoolo
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['btnsubmit'])) {
     $first_name = $_POST['first-name'];
     $last_name = $_POST['last-name'];
     $email = $_POST['email'];
@@ -20,9 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // SQL Query to insert data
     $query = "INSERT INTO form (First_Name, Last_Name, Email, Contact_Number, Message) VALUES ('$first_name', '$last_name', '$email', '$contact_number', '$message')";
 
-    if (mysqli_query($conn, $query)) {
-        echo "Thank You!", "<br>";
-        echo "<a href='index.html'><button>Back</button></a>";
+    $result = mysqli_query($conn, $query);
+    if($result){
+        header("Location: index.html"); 
+    }
+
+    if ($result) {
 
         // Email Send Setup
         $mail = new PHPMailer(true);
@@ -53,12 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->send();
         } catch (Exception $e) {
-            echo "<br>Email could not be sent. Error: {$mail->ErrorInfo}";
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
 
 
-    } else {
-        echo "Error: " . mysqli_error($conn);
     }
 
     // Connection close kar do
