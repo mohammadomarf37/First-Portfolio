@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -41,12 +45,12 @@ if (isset($_POST['btnsubmit'])) {
             $mail->Port = 587;
 
             // Email Settings
-            $mail->setFrom('form.submission4@gmail.com', 'Portfolio Form');
+            $mail->setFrom('form.submission4@gmail.com', 'Portfolio Form (1)');
             $mail->addAddress('mohammadomarf37@gmail.com'); // Apni email par send karega
 
-            $mail->Subject = "New Form Submission";
+            $mail->Subject = "New Portfolio Form Submission";
             $mail->Body = "
-                New Form has been submitted: 
+                New Portfolio Form has been submitted: 
                 First Name: $first_name
                 Last Name: $last_name
                 Email: $email
